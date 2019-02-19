@@ -1,0 +1,11 @@
+lxd:
+  containers:
+    local:
+      wprs-123:
+        running: True
+        source: ubuntu-18.04
+        bootstrap_scripts:
+          - cmd: [ '/bin/sleep', '2' ]
+          - src: salt://master/lxd/bootstrap.sh
+            dst: /root/bootstrap.sh
+            cmd: [ '/root/bootstrap.sh']

@@ -1,0 +1,7 @@
+ext_pillar:
+  - file_tree:
+      root_dir: /srv/ext_pillar
+      follow_dir_links: False
+      keep_newline: True
+      template: True
+      render_default: jinja|yaml

@@ -1,0 +1,5 @@
+file_roots:
+  base:
+    - /srv/salt
+    - /srv/formulas/lxd-formula
+    - /srv/formulas/pip-formula

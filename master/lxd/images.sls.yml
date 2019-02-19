@@ -1,0 +1,10 @@
+lxd:
+  images:
+    local:
+      ubuntu-18.04:
+        name: ubuntu-18.04
+        source:
+          name: ubuntu/bionic/amd64
+          remote: images_linuxcontainers_org
+        public: False
+        auto_update: True

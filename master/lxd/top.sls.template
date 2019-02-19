@@ -1,0 +1,7 @@
+base:
+  # Just the Master
+  # Note: This depends on a role which can be changed at the minion level.
+  # Do not attach any states that would push sensitive pillar data using this match.
+  'roles:salt-master':
+    - match: grain
+    - lxd.*

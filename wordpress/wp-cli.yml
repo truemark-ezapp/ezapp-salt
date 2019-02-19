@@ -1,0 +1,14 @@
+path: /var/www/wordpress
+url: {{ pillar['wordpress']['url'] }}
+user: {{ pillar['wordpress']['admin_user'] }}
+disabled_commands:
+  - db drop
+config create:
+  dbhost: {{ pillar['wordpress']['db_host'] }}
+  dbname: {{ pillar['wordpress']['db_name'] }}
+  dbuser: {{ pillar['wordpress']['db_user'] }}
+core install:
+  url: {{ pillar['wordpress']['url'] }}
+  admin_user: {{ pillar['wordpress']['admin_user'] }}
+  admin_email: {{ pillar['wordpress']['admin_email'] }}
+  title: {{ pillar['wordpress']['title'] }}

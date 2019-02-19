@@ -1,0 +1,11 @@
+[Unit]
+Description=Create dummy interface
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/sbin/ip li add dummy0 type dummy
+ExecStartPost=/sbin/ip address add 169.254.1.1/32 dev dummy0
+
+[Install]
+WantedBy=multi-user.target

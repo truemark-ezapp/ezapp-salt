@@ -1,0 +1,7 @@
+base:
+  '{{ grains.id }}':
+    - master.config
+    - master.dummy
+    - master.lxd
+  '*':
+    - tools.vim
